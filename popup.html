@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CA web plugin</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .title {
+            margin: 0;
+            padding: 8px 10px;
+        }
+
+        .dropdown-content {
+            background-color: #f9f9f9;
+            min-width: 180px;
+            display: block;
+
+        }
+
+        .dropdown-content label {
+            color: black;
+            padding: 8px 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content label:hover {
+            background-color: #f1f1f1
+        }
+
+        input {
+            padding-left: 0;
+            margin-left: 0;
+            margin-bottom: 1px;
+            vertical-align: middle;
+        }
+
+        label span {
+            vertical-align: middle;
+        }
+
+        hr {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="dropdown-content">
+    <h3 class="title">CA web plugin</h3>
+    <hr>
+    <label><input type="checkbox" id="pro_pretraga"><span>Proširena pretraga</span></label>
+    <label><input type="checkbox" id="clear_input"><span>Očisti unos pretrage</span></label>
+    <label><input type="checkbox" id="hide_sidepanel"><span>Sakrij bočnu traku</span></label>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
