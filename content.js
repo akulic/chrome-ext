@@ -31,12 +31,15 @@ window.onload = function () {
 
     article_search.keydown(function (e) {
         if ((e.which || e.keyCode) == 13) {
-            getCheckState(function (prosirenaCheck) {
-                if (prosirenaCheck == true) { // Return value
-                    e.preventDefault();
-                    createHref();
-                }
-            });
+            console.log('Enter pressed');
+            e.preventDefault();
+            createHref();
+            // getCheckState(function (prosirenaCheck) {
+            //     if (prosirenaCheck == true) { // Return value
+            //         e.preventDefault();
+            //         createHref();
+            //     }
+            // });
         }
     });
 
@@ -56,13 +59,13 @@ window.onload = function () {
 };
 
 // Get check state from chrome storage
-function getCheckState(_callback) {
-    chrome.storage.sync.get({ProsirenaChecked: false}, function (items) {
-        if (typeof _callback == "function") {
-            _callback(items.ProsirenaChecked);  // Return value
-        }
-    });
-}
+// function getCheckState(_callback) {
+//     chrome.storage.sync.get({ProsirenaChecked: false}, function (items) {
+//         if (typeof _callback == "function") {
+//             _callback(items.ProsirenaChecked);  // Return value
+//         }
+//     });
+// }
 
 function createHref() {
     let article = $("#txt_articleSearch").val();
