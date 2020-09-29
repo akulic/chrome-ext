@@ -1,9 +1,9 @@
 // Triggered when the checkbox state changes
-var pro_pretraga = document.getElementById('pro_pretraga');
+// var pro_pretraga = document.getElementById('pro_pretraga');
 var clear_input = document.getElementById('clear_input');
 var hide_sidepanel = document.getElementById('hide_sidepanel');
 
-pro_pretraga.addEventListener('change', saveState);
+// pro_pretraga.addEventListener('change', saveState);
 clear_input.addEventListener('change', saveState);
 hide_sidepanel.addEventListener('change', saveState);
 
@@ -23,7 +23,7 @@ function saveState() {
 // Set checkbox state from storage
 window.onload = function () {
     chrome.storage.sync.get({ProsirenaChecked: false, ClearInput: false, HideSidepanel: false}, function (items) {
-        pro_pretraga.checked = items.ProsirenaChecked;
+        // pro_pretraga.checked = items.ProsirenaChecked;
         clear_input.checked = items.ClearInput;
         hide_sidepanel.checked = items.HideSidepanel;
     });
